@@ -1,0 +1,301 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>Responsive</title>
+	<style>
+		* {-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+		*:before,
+		*:after {-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+		body {font-family: sans-serif; padding:0; margin:0;}
+		a {color:#333; text-decoration:none;}
+		header {background:#333; padding:20px; overflow:hidden;}
+		header h1 {margin:0;}
+		nav {margin: 10px 0; display:none; float:right; width:100%;}
+		nav ul {list-style:none; margin:0; padding:0;}
+		nav li {float:left; margin:0 15px; width:100%; margin:10px 0;}
+		nav li a {color:#eee; padding:5px; background:#999; display:block; border-radius:3px;}
+
+		nav.show {display:block;}
+
+		.burger {color:#fff; margin:10px; cursor:pointer;}
+
+		.logo {color:#fff; float:left;}
+
+		.go-right {float:right;}
+		.go-left {float:left;}
+
+		.wrap {margin:20px auto;}
+		.row {margin-left:-10px; margin-right:-10px; margin-bottom:10px;}
+		.col {position:relative; padding:0 10px; box-sizing: border-box;}
+		.cell {border:1px solid #ccc; background:#eee;} /* This is just temp to show columns */
+
+		/* THE GRID */
+		.mobile-one, .mobile-two, .mobile-three, .mobile-four, .mobile-five, .mobile-six, .mobile-seven, .mobile-eight, .mobile-nine, .mobile-ten, .mobile-eleven, .mobile-twelve {float:left;}
+		.mobile-one {width:8.33333333%;}
+		.mobile-two {width:16.66666667%;}
+		.mobile-three {width:25%;}
+		.mobile-four {width:33.33333333%;}
+		.mobile-five {width:41.66666667%;}
+		.mobile-six {width:50%;}
+		.mobile-seven {width:58.33333333%;}
+		.mobile-eight {width:66.66666667%;}
+		.mobile-nine {width:75%;}
+		.mobile-ten {width:83.33333333%;}
+		.mobile-eleven {width:91.66666667%;}
+		.mobile-twelve {width:100%;}
+
+		@media (min-width: 768px) {
+			.wrap {width: 750px;}
+			.tablet-one, .tablet-two, .tablet-three, .tablet-four, .tablet-five, .tablet-six, .tablet-seven, .tablet-eight, .tablet-nine, .tablet-ten, .tablet-eleven, .tablet-twelve {float:left;}
+			.tablet-one {width:8.33333333%;}
+			.tablet-two {width:16.66666667%;}
+			.tablet-three {width:25%;}
+			.tablet-four {width:33.33333333%;}
+			.tablet-five {width:41.66666667%;}
+			.tablet-six {width:50%;}
+			.tablet-seven {width:58.33333333%;}
+			.tablet-eight {width:66.66666667%;}
+			.tablet-nine {width:75%;}
+			.tablet-ten {width:83.33333333%;}
+			.tablet-eleven {width:91.66666667%;}
+			.tablet-twelve {width:100%;}
+		}
+
+		@media (min-width: 992px) {
+			.wrap {width: 970px;}
+			.desktop-one, .desktop-two, .desktop-three, .desktop-four, .desktop-five, .desktop-six, .desktop-seven, .desktop-eight, .desktop-nine, .desktop-ten, .desktop-eleven, .desktop-twelve {float:left;}
+			.desktop-one {width:8.33333333%;}
+			.desktop-two {width:16.66666667%;}
+			.desktop-three {width:25%;}
+			.desktop-four {width:33.33333333%;}
+			.desktop-five {width:41.66666667%;}
+			.desktop-six {width:50%;}
+			.desktop-seven {width:58.33333333%;}
+			.desktop-eight {width:66.66666667%;}
+			.desktop-nine {width:75%;}
+			.desktop-ten {width:83.33333333%;}
+			.desktop-eleven {width:91.66666667%;}
+			.desktop-twelve {width:100%;}
+		}
+
+		@media (min-width: 1200px) {
+			.wrap {width: 1170px;}
+			.widescreen-one, .widescreen-two, .widescreen-three, .widescreen-four, .widescreen-five, .widescreen-six, .widescreen-seven, .widescreen-eight, .widescreen-nine, .widescreen-ten, .widescreen-eleven, .widescreen-twelve {float:left;}
+			.widescreen-one {width:8.33333333%;}
+			.widescreen-two {width:16.66666667%;}
+			.widescreen-three {width:25%;}
+			.widescreen-four {width:33.33333333%;}
+			.widescreen-five {width:41.66666667%;}
+			.widescreen-six {width:50%;}
+			.widescreen-seven {width:58.33333333%;}
+			.widescreen-eight {width:66.66666667%;}
+			.widescreen-nine {width:75%;}
+			.widescreen-ten {width:83.33333333%;}
+			.widescreen-eleven {width:91.66666667%;}
+			.widescreen-twelve {width:100%;}
+		}
+
+		@media (min-width: 992px) {
+			.burger {display:none;}
+			nav {display:block; width:auto; margin:0;}
+			nav ul li {width:auto; margin:5px 0;}
+			nav ul li a {background:none;}
+		}
+
+		.clearfix:before,
+		.clearfix:after,
+		.wrap:before,
+		.wrap:after,
+		.row:before,
+		.row:after {
+		  display: table;
+		  content: " ";
+		}
+		.clearfix:after,
+		.wrap:after,
+		.row:after {
+		  clear: both;
+		}
+
+	</style>
+
+</head>
+<body>
+	<header>
+
+		<h1 class="logo">LOGO</h1>
+		
+		<span id="burger" class="burger go-right">&#9776; Menu</span>
+		<nav id="nav">
+			<ul>
+				<li><a href="#">Item 1</a></li>
+				<li><a href="#">Item 2</a></li>
+				<li><a href="#">Item 3</a></li>
+			</ul>
+		</nav>
+
+	</header>
+	<div class="wrap">
+		<h2>Mobile</h2>
+		<div class="row">
+			<div class="col mobile-one"><div class="cell">One</div></div><div class="col mobile-eleven"><div class="cell">Eleven</div></div>
+		</div>
+		<div class="row">
+			<div class="col mobile-two"><div class="cell">Two</div></div><div class="col mobile-ten"><div class="cell">Ten</div></div>
+		</div>
+		<div class="row">
+			<div class="col mobile-three"><div class="cell">Three</div></div><div class="col mobile-nine"><div class="cell">Nine</div></div>
+		</div>
+		<div class="row">
+			<div class="col mobile-four"><div class="cell">Four</div></div><div class="col mobile-eight"><div class="cell">Eight</div></div>
+		</div>
+		<div class="row">
+			<div class="col mobile-five"><div class="cell">Five</div></div><div class="col mobile-seven"><div class="cell">Seven</div></div>
+		</div>
+		<div class="row">
+			<div class="col mobile-six"><div class="cell">Six</div></div><div class="col mobile-six"><div class="cell">Six</div></div>
+		</div>
+		<div class="row">
+			<div class="col mobile-seven"><div class="cell">Seven</div></div><div class="col mobile-five"><div class="cell">Five</div></div>
+		</div>
+		<div class="row">
+			<div class="col mobile-eight"><div class="cell">Eight</div></div><div class="col mobile-four"><div class="cell">Four</div></div>
+		</div>
+		<div class="row">
+			<div class="col mobile-nine"><div class="cell">Nine</div></div><div class="col mobile-three"><div class="cell">Three</div></div>
+		</div>
+		<div class="row">
+			<div class="col mobile-ten"><div class="cell">Ten</div></div><div class="col mobile-two"><div class="cell">Two</div></div>
+		</div>
+		<div class="row">
+			<div class="col mobile-eleven"><div class="cell">Eleven</div></div><div class="col mobile-one"><div class="cell">One</div></div>
+		</div>
+	</div>
+
+	<div class="wrap">
+		<h2>Tablet</h2>
+		<div class="row">
+			<div class="col tablet-one"><div class="cell">One</div></div><div class="col tablet-eleven"><div class="cell">Eleven</div></div>
+		</div>
+		<div class="row">
+			<div class="col tablet-two"><div class="cell">Two</div></div><div class="col tablet-ten"><div class="cell">Ten</div></div>
+		</div>
+		<div class="row">
+			<div class="col tablet-three"><div class="cell">Three</div></div><div class="col tablet-nine"><div class="cell">Nine</div></div>
+		</div>
+		<div class="row">
+			<div class="col tablet-four"><div class="cell">Four</div></div><div class="col tablet-eight"><div class="cell">Eight</div></div>
+		</div>
+		<div class="row">
+			<div class="col tablet-five"><div class="cell">Five</div></div><div class="col tablet-seven"><div class="cell">Seven</div></div>
+		</div>
+		<div class="row">
+			<div class="col tablet-six"><div class="cell">Six</div></div><div class="col tablet-six"><div class="cell">Six</div></div>
+		</div>
+		<div class="row">
+			<div class="col tablet-seven"><div class="cell">Seven</div></div><div class="col tablet-five"><div class="cell">Five</div></div>
+		</div>
+		<div class="row">
+			<div class="col tablet-eight"><div class="cell">Eight</div></div><div class="col tablet-four"><div class="cell">Four</div></div>
+		</div>
+		<div class="row">
+			<div class="col tablet-nine"><div class="cell">Nine</div></div><div class="col tablet-three"><div class="cell">Three</div></div>
+		</div>
+		<div class="row">
+			<div class="col tablet-ten"><div class="cell">Ten</div></div><div class="col tablet-two"><div class="cell">Two</div></div>
+		</div>
+		<div class="row">
+			<div class="col tablet-eleven"><div class="cell">Eleven</div></div><div class="col tablet-one"><div class="cell">One</div></div>
+		</div>
+	</div>
+
+	<div class="wrap">
+		<h2>Desktop</h2>
+		<div class="row">
+			<div class="col desktop-one"><div class="cell">One</div></div><div class="col desktop-eleven"><div class="cell">Eleven</div></div>
+		</div>
+		<div class="row">
+			<div class="col desktop-two"><div class="cell">Two</div></div><div class="col desktop-ten"><div class="cell">Ten</div></div>
+		</div>
+		<div class="row">
+			<div class="col desktop-three"><div class="cell">Three</div></div><div class="col desktop-nine"><div class="cell">Nine</div></div>
+		</div>
+		<div class="row">
+			<div class="col desktop-four"><div class="cell">Four</div></div><div class="col desktop-eight"><div class="cell">Eight</div></div>
+		</div>
+		<div class="row">
+			<div class="col desktop-five"><div class="cell">Five</div></div><div class="col desktop-seven"><div class="cell">Seven</div></div>
+		</div>
+		<div class="row">
+			<div class="col desktop-six"><div class="cell">Six</div></div><div class="col desktop-six"><div class="cell">Six</div></div>
+		</div>
+		<div class="row">
+			<div class="col desktop-seven"><div class="cell">Seven</div></div><div class="col desktop-five"><div class="cell">Five</div></div>
+		</div>
+		<div class="row">
+			<div class="col desktop-eight"><div class="cell">Eight</div></div><div class="col desktop-four"><div class="cell">Four</div></div>
+		</div>
+		<div class="row">
+			<div class="col desktop-nine"><div class="cell">Nine</div></div><div class="col desktop-three"><div class="cell">Three</div></div>
+		</div>
+		<div class="row">
+			<div class="col desktop-ten"><div class="cell">Ten</div></div><div class="col desktop-two"><div class="cell">Two</div></div>
+		</div>
+		<div class="row">
+			<div class="col desktop-eleven"><div class="cell">Eleven</div></div><div class="col desktop-one"><div class="cell">One</div></div>
+		</div>
+	</div>
+
+	<div class="wrap">
+		<h2>Widescreen</h2>
+		<div class="row">
+			<div class="col widescreen-one"><div class="cell">One</div></div><div class="col widescreen-eleven"><div class="cell">Eleven</div></div>
+		</div>
+		<div class="row">
+			<div class="col widescreen-two"><div class="cell">Two</div></div><div class="col widescreen-ten"><div class="cell">Ten</div></div>
+		</div>
+		<div class="row">
+			<div class="col widescreen-three"><div class="cell">Three</div></div><div class="col widescreen-nine"><div class="cell">Nine</div></div>
+		</div>
+		<div class="row">
+			<div class="col widescreen-four"><div class="cell">Four</div></div><div class="col widescreen-eight"><div class="cell">Eight</div></div>
+		</div>
+		<div class="row">
+			<div class="col widescreen-five"><div class="cell">Five</div></div><div class="col widescreen-seven"><div class="cell">Seven</div></div>
+		</div>
+		<div class="row">
+			<div class="col widescreen-six"><div class="cell">Six</div></div><div class="col widescreen-six"><div class="cell">Six</div></div>
+		</div>
+		<div class="row">
+			<div class="col widescreen-seven"><div class="cell">Seven</div></div><div class="col widescreen-five"><div class="cell">Five</div></div>
+		</div>
+		<div class="row">
+			<div class="col widescreen-eight"><div class="cell">Eight</div></div><div class="col widescreen-four"><div class="cell">Four</div></div>
+		</div>
+		<div class="row">
+			<div class="col widescreen-nine"><div class="cell">Nine</div></div><div class="col widescreen-three"><div class="cell">Three</div></div>
+		</div>
+		<div class="row">
+			<div class="col widescreen-ten"><div class="cell">Ten</div></div><div class="col widescreen-two"><div class="cell">Two</div></div>
+		</div>
+		<div class="row">
+			<div class="col widescreen-eleven"><div class="cell">Eleven</div></div><div class="col widescreen-one"><div class="cell">One</div></div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		var burger = document.getElementById("burger");
+
+		burger.onclick = function() {
+			var nav = document.getElementById("nav");
+			if (nav.className.match(/(?:^|\s)show(?!\S)/)) {
+				nav.className = "";
+			} else {
+				nav.className = "show";
+			}
+		}
+	</script>
+
+</body>
+</html>
